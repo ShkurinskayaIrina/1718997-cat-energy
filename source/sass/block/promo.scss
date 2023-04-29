@@ -1,0 +1,18 @@
+.promo {
+  font-family: $font-heading;
+  color: $color-white;
+  background-color: $color-main;
+  text-align: center;
+
+  background-image: url("../../img/background/promo.jpg");
+}
+
+.promo__heading {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.promo__text {
+  text-transform: uppercase;
+}

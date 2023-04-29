@@ -1,0 +1,21 @@
+.example__text {
+  color: $color-dark-grey;
+}
+
+.example__title {
+  color: $color-dark-grey;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+.example__definition {
+  font-family: $font-heading;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__spending {
+  font-family: $font-heading;
+  line-height: 20px;
+  text-transform: uppercase;
+}

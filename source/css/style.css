@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/oswald/oswaldregular.woff2") format("woff2"), url("../../fonts/oswald/oswaldregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../fonts/oswald/oswaldmedium.woff2") format("woff2"), url("../../fonts/oswaldmedium.woff") format("woff");
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page__body {
+  margin: 0;
+}
+
+.site-menu {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  list-style: none;
+  text-align: center;
+}
+
+.site-menu__link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.promo {
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #ffffff;
+  background-color: #68b738;
+  text-align: center;
+  background-image: url("../../img/background/promo.jpg");
+}
+
+.promo__heading {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.promo__text {
+  text-transform: uppercase;
+}
+
+.button {
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #68b738;
+  border: none;
+}
+
+.button--secondary {
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+  background-color: #f2f2f2;
+}
+
+.catalog-sections__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.catalog-sections__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.page-main__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.page-main__subheading {
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.process__list {
+  color: #444444;
+  list-style-type: none;
+}
+
+.example__text {
+  color: #444444;
+}
+
+.example__title {
+  color: #444444;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+.example__definition {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__spending {
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.switcher__button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.contacts__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.contacts__address {
+  color: #444444;
+}
+
+.copyright {
+  font-size: 16px;
+  color: #444444;
+  text-decoration: none;
+}
+
+.card__link {
+  text-decoration: none;
+}
+
+.card__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.card__list {
+  color: #444444;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.show-more__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.show-more__text {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.catalog-additional__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.catalog-additional__list {
+  list-style-type: none;
+}
+
+.card-row__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.card-row__list {
+  color: #444444;
+}
+
+.offer {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #68b738;
+  background-image: url("../../img/background/offer.jpg");
+  text-align: center;
+}
+
+.field-group {
+  border: none;
+}
+
+.field-group__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.field-group__list {
+  list-style-type: none;
+}
+
+.field {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+}
+
+.field__input {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+}
+
+.control {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #222222;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */
