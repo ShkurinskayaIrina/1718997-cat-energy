@@ -1,10 +1,19 @@
 .button {
+  display: inline-block;
+  padding: 11px;
+  text-align: center;
   font-family: $font-heading;
   color: $color-white;
   text-decoration: none;
   text-transform: uppercase;
   background-color: $color-main;
   border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 17px 26px;
+  }
 }
 
 .button--secondary {

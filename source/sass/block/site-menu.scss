@@ -1,14 +1,70 @@
 .site-menu {
   font-family: $font-heading;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 20px;
 
   text-transform: uppercase;
   list-style: none;
   text-align: center;
+
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .site-menu {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-menu {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .site-menu__link {
-  color: #000000;
+  display: block;
+  color: $color-black;
   text-decoration: none;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  border-top: 1px solid #e6e6e6;
+}
+
+@media (min-width: $tablet-width) {
+  .site-menu__link {
+    border-top: none;
+    padding: 17px 0 9px 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-menu__link {
+    color: $color-white;
+  }
+}
+
+.site-menu__current {
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .site-menu__current::after {
+    content: "";
+    position: absolute;
+    left: 36px;
+    right: 0;
+    height: 2px;
+    background-color: #68b738;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-menu__current::after {
+    height: 2px;
+    background-color: #ffffff;
+  }
 }

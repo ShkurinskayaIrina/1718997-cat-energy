@@ -1,10 +1,42 @@
+.example {
+  padding-top: 25px;
+  background-color: $color-lavender;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    padding-top: 43px;
+    background-color: $color-white; //исправить
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    padding-top: 25px;
+  }
+}
+
 .example__text {
+  word-spacing: -0.6px;
   color: $color-dark-grey;
+}
+
+@media (min-width: $tablet-width) {
+  .example__text {
+    margin-top: 64px;
+    word-spacing: 1px;
+  }
+}
+
+.example__list {
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .example__title {
   color: $color-dark-grey;
   font-size: 12px;
+  line-height: 12px;
   text-transform: lowercase;
 }
 
@@ -15,6 +47,7 @@
 }
 
 .example__spending {
+  text-align: center;
   font-family: $font-heading;
   line-height: 20px;
   text-transform: uppercase;
