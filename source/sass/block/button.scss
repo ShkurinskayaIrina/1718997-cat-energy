@@ -8,10 +8,8 @@
   text-transform: uppercase;
   background-color: $color-main;
   border: none;
-}
 
-@media (min-width: $tablet-width) {
-  .button {
+  @media (min-width: $tablet-width) {
     padding: 17px 26px;
   }
 }
@@ -19,6 +17,6 @@
 .button--secondary {
   font-size: 16px;
   line-height: 20px;
-  color: $color-dark-grey;
+  color: $color-twilight-grey;
   background-color: $color-smoky-white;
 }

@@ -1,42 +1,26 @@
 .contacts {
-  padding-top: 25px;
-}
-
-@media (min-width: $tablet-width) {
-  .contacts {
-    padding-top: 53px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .contacts {
+  @media (min-width: $desktop-width) {
     position: relative;
   }
 }
 
 .contacts__wrapper {
+  width: $content-mobile-width;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-right: 20px;
-  margin-left: 20px;
-  padding-bottom: 26px;
-}
+  padding: 26px 0;
 
-@media (min-width: $tablet-width) {
-  .contacts__wrapper {
+  @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 171px);
     justify-content: space-between;
-    margin-right: 65px;
-    margin-left: 67px;
-    padding-bottom: 60px;
+    padding: 56px 40px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .contacts__wrapper {
+  @media (min-width: $desktop-width) {
+    gap: 80px;
     position: absolute;
-    left: 130px;
-    top: 155px;
+    top: 95px;
+    left: 110px;
     margin: 0;
     padding: 56px 80px;
     background-color: $color-white;
@@ -49,11 +33,8 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
-}
 
-
-@media (min-width: $tablet-width) {
-  .contacts__heading {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 26px;
   }
@@ -61,24 +42,28 @@
 
 .contacts__address {
   margin: 0;
-  color: $color-dark-grey;
-}
+  color: $color-twilight-grey;
+  line-height: 20px;
 
-@media (min-width: $tablet-width) {
-  .contacts__address {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
   }
 }
 
-@media (min-width: $tablet-width) {
-  .contacts__location {
+.contacts__location {
+  @media (min-width: $tablet-width) {
     width: 768px;
     height: 400px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .contacts__location {
+  @media (min-width: $desktop-width) {
     height: 400px;
     width: 1440px;
   }

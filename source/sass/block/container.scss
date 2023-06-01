@@ -1,0 +1,19 @@
+.container {
+  width: $content-mobile-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    width: $content-tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $content-desktop-width;
+  }
+}
+
+.container.contacts__wrapper {
+  @media (min-width: $desktop-width) {
+    width: 39%;
+  }
+}

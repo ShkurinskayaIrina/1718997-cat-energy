@@ -4,15 +4,14 @@
   gap: 10px;
   flex-wrap: wrap;
   margin: 0;
-  padding: 10px 0;
+  padding: 9px 0;
 
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid $color-platinum;
+  border-bottom: 1px solid $color-platinum;
   list-style-type: none;
-}
 
-@media (min-width: $desktop-width) {
-  .social {
+  @media (min-width: $tablet-width) {
+    padding: 0;
     border: none;
   }
 }

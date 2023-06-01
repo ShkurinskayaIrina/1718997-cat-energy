@@ -9,19 +9,37 @@
 
   padding: 0;
   margin: 0;
-}
 
-@media (min-width: $tablet-width) {
-  .site-menu {
+  @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .site-menu {
+  @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.site-menu__item--current {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 36px;
+      right: 0;
+      height: 2px;
+      background-color: $color-main;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      height: 2px;
+      background-color: $color-white;
+    }
   }
 }
 
@@ -30,41 +48,17 @@
   color: $color-black;
   text-decoration: none;
   padding-top: 22px;
-  padding-bottom: 24px;
-  border-top: 1px solid #e6e6e6;
-}
+  padding-bottom: 23px;
+  border-top: 1px solid $color-smoky-gray;
 
-@media (min-width: $tablet-width) {
-  .site-menu__link {
+  @media (min-width: $tablet-width) {
     border-top: none;
-    padding: 17px 0 9px 36px;
+    padding: 17px 0 8px 36px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .site-menu__link {
+  @media (min-width: $desktop-width) {
     color: $color-white;
+    padding-left: 34px;
   }
 }
 
-.site-menu__current {
-  position: relative;
-}
-
-@media (min-width: $tablet-width) {
-  .site-menu__current::after {
-    content: "";
-    position: absolute;
-    left: 36px;
-    right: 0;
-    height: 2px;
-    background-color: #68b738;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .site-menu__current::after {
-    height: 2px;
-    background-color: #ffffff;
-  }
-}
