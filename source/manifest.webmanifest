@@ -1,0 +1,10 @@
+{
+  "name": "Cat-energy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eeeeee",
+  "icons": [
+   { "src": "img/favicons/favicon-152x152.png", "type": "image/png", "sizes": "152x152" },
+   { "src": "img/favicons/favicon-192x192.png", "type": "image/png", "sizes": "192x192" }
+ ]
+}

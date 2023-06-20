@@ -1,10 +1,13 @@
 .page-header {
+  padding-top: 10px;
+  padding-bottom: 13px;
+
   @media (min-width: $tablet-width) {
     padding-top: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 50px;
+    padding-top: 53px;
   }
 }
 
@@ -21,7 +24,6 @@
   display: grid;
   grid-template-columns: 34px 1fr 34px;
   align-items: center;
-  min-height: 65px;
 
   @media (min-width: $tablet-width) {
     width: max-content;
@@ -34,6 +36,10 @@
   grid-template-columns: 34px 1fr;
   align-items: center;
   grid-column: 1/3;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .page-header__toggler {

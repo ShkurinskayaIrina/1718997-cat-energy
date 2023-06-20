@@ -30,12 +30,12 @@
 }
 
 .example__content {
-  padding-bottom: 30px;
+  padding-bottom: 39px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 366px 1fr;
-    gap: 32px;
+    gap: 33px;
     padding-bottom: 50px;
   }
 

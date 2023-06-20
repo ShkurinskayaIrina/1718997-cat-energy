@@ -1,6 +1,30 @@
-.logo-image {
+.logo.page-header__logo {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 61px 1fr;
+    gap: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 9px;
+  }
+}
+
+.logo__image {
   width: 34px;
   height: 38px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
 }
 
 .logo__sign {
@@ -8,4 +32,9 @@
   height: 18px;
   justify-self: center;
   object-fit: cover;
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
 }

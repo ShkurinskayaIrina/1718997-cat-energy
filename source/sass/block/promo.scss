@@ -1,17 +1,40 @@
 .promo {
+  position: relative;
   font-family: $font-heading;
   color: $color-white;
   text-align: center;
 
-  background-color: $color-main;
-  background-image: url("../../img/background/promo-small.png"),
-    linear-gradient($color-dark-yellow-green 302px, $color-white 302px);
-  background-repeat: no-repeat;
-  background-position: 50% 0;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &::before {
+    z-index: -1;
+    background-image: linear-gradient($color-main 302px, $color-white 302px);
+    opacity: 0.85;
+  }
+
+  &::after {
+    z-index: -2;
+    background-image: url("../../img/background/promo-mobile.png"),
+      linear-gradient($color-main 302px, $color-white 302px);
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/promo-mobile@2x.png");
+      background-size: 100% auto;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     position: relative;
-    min-height: 860px;
+    min-height: 854px;
 
     color: $color-black;
     text-align: left;
@@ -19,23 +42,33 @@
     background-image: none;
     background-repeat: no-repeat;
     background-position: 50% 0;
+
+    &::before,
+    &::after {
+      background-image: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 580px;
+    min-height: 562px;
+
+    &::before,
+    &::after {
+      top: -135px;
+      left: 50%;
+    }
+
+    &::before {
+      background-color: $color-main;
+    }
 
     &::after {
-      position: absolute;
-      content: "";
-      top: -200px;
-      right: 0;
-      bottom: 0;
-      left: 50%;
-      z-index: -1;
-      background-color: $color-dark-yellow-green;
-      background-position: 0 100%;
-      background-repeat: no-repeat;
-      background-image: url("../../img/background/promo-big.png");
+      background-image: url("../../img/background/promo-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background/promo-desktop@2x.png");
+        background-size: 720px auto;
+      }
     }
   }
 }
@@ -45,14 +78,14 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 50px;
+    padding-top: 43px;
     padding-left: 117px;
 
     text-align: start;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 106px;
+    padding-top: 92px;
     padding-left: 190px;
   }
 }
@@ -84,15 +117,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 }
 
 .promo__image {
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 251px;
-    left: 70px;
+    top: 243px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 709px;
     height: 609px;
     z-index: -1;
@@ -101,7 +136,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 32px;
+    top: 10px;
     left: calc(50% - 162px);
     width: 552px;
     height: 499px;

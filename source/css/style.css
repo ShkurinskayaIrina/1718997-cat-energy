@@ -452,13 +452,13 @@ img {
 }
 
 .example__content {
-  padding-bottom: 30px;
+  padding-bottom: 39px;
 }
 @media (min-width: 768px) {
   .example__content {
     display: grid;
     grid-template-columns: 366px 1fr;
-    gap: 32px;
+    gap: 33px;
     padding-bottom: 50px;
   }
 }
@@ -665,9 +665,36 @@ img {
   padding-top: 20px;
 }
 
-.logo-image {
+@media (min-width: 768px) {
+  .logo.page-header__logo {
+    display: grid;
+    grid-template-columns: 61px 1fr;
+    gap: 12px;
+  }
+}
+@media (min-width: 1300px) {
+  .logo.page-header__logo {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 9px;
+  }
+}
+
+.logo__image {
   width: 34px;
   height: 38px;
+}
+@media (min-width: 768px) {
+  .logo__image {
+    width: 174px;
+    height: 52px;
+  }
+}
+@media (min-width: 1300px) {
+  .logo__image {
+    width: 202px;
+    height: 59px;
+  }
 }
 
 .logo__sign {
@@ -675,6 +702,12 @@ img {
   height: 18px;
   justify-self: center;
   object-fit: cover;
+}
+@media (min-width: 1300px) {
+  .logo__sign {
+    width: 118px;
+    height: 21px;
+  }
 }
 
 .offer {
@@ -741,6 +774,10 @@ img {
   }
 }
 
+.page-header {
+  padding-top: 10px;
+  padding-bottom: 13px;
+}
 @media (min-width: 768px) {
   .page-header {
     padding-top: 25px;
@@ -748,7 +785,7 @@ img {
 }
 @media (min-width: 1300px) {
   .page-header {
-    padding-top: 50px;
+    padding-top: 53px;
   }
 }
 
@@ -766,7 +803,6 @@ img {
   display: grid;
   grid-template-columns: 34px 1fr 34px;
   align-items: center;
-  min-height: 65px;
 }
 @media (min-width: 768px) {
   .page-header__wrapper {
@@ -780,6 +816,11 @@ img {
   grid-template-columns: 34px 1fr;
   align-items: center;
   grid-column: 1/3;
+}
+@media (min-width: 768px) {
+  .page-header__logo {
+    display: block;
+  }
 }
 
 .page-header__toggler {
@@ -896,13 +937,13 @@ img {
 @media (min-width: 768px) {
   .process {
     padding-top: 44px;
-    padding-bottom: 47px;
+    padding-bottom: 46px;
     border-bottom: 1px solid #e6e6e6;
   }
 }
 @media (min-width: 1300px) {
   .process {
-    padding-top: 70px;
+    padding-top: 72px;
     padding-bottom: 30px;
     border-bottom: none;
   }
@@ -941,7 +982,7 @@ img {
     position: relative;
     z-index: 0;
     min-height: 280px;
-    padding-top: 41px;
+    padding-top: 40px;
     padding-right: 72px;
     grid-template-columns: auto;
     grid-template-rows: 80px auto;
@@ -1014,18 +1055,39 @@ img {
 }
 
 .promo {
+  position: relative;
   font-family: "Oswald", "Arial", sans-serif;
   color: #ffffff;
   text-align: center;
-  background-color: #68b738;
-  background-image: url("../../img/background/promo-small.png"), linear-gradient(#63a63b 302px, #ffffff 302px);
+}
+.promo::before, .promo::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.promo::before {
+  z-index: -1;
+  background-image: linear-gradient(#68b738 302px, #ffffff 302px);
+  opacity: 0.85;
+}
+.promo::after {
+  z-index: -2;
+  background-image: url("../../img/background/promo-mobile.png"), linear-gradient(#68b738 302px, #ffffff 302px);
   background-repeat: no-repeat;
-  background-position: 50% 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .promo::after {
+    background-image: url("../../img/background/promo-mobile@2x.png");
+    background-size: 100% auto;
+  }
 }
 @media (min-width: 768px) {
   .promo {
     position: relative;
-    min-height: 860px;
+    min-height: 854px;
     color: #000000;
     text-align: left;
     background-color: transparent;
@@ -1033,23 +1095,29 @@ img {
     background-repeat: no-repeat;
     background-position: 50% 0;
   }
+  .promo::before, .promo::after {
+    background-image: none;
+  }
 }
 @media (min-width: 1300px) {
   .promo {
-    min-height: 580px;
+    min-height: 562px;
+  }
+  .promo::before, .promo::after {
+    top: -135px;
+    left: 50%;
+  }
+  .promo::before {
+    background-color: #68b738;
   }
   .promo::after {
-    position: absolute;
-    content: "";
-    top: -200px;
-    right: 0;
-    bottom: 0;
-    left: 50%;
-    z-index: -1;
-    background-color: #63a63b;
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    background-image: url("../../img/background/promo-big.png");
+    background-image: url("../../img/background/promo-desktop.png");
+  }
+}
+@media (min-width: 1300px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1300px) and (min-resolution: 2dppx) {
+  .promo::after {
+    background-image: url("../../img/background/promo-desktop@2x.png");
+    background-size: 720px auto;
   }
 }
 
@@ -1059,14 +1127,14 @@ img {
 }
 @media (min-width: 768px) {
   .promo__wrapper {
-    padding-top: 50px;
+    padding-top: 43px;
     padding-left: 117px;
     text-align: start;
   }
 }
 @media (min-width: 1300px) {
   .promo__wrapper {
-    padding-top: 106px;
+    padding-top: 92px;
     padding-left: 190px;
   }
 }
@@ -1100,15 +1168,17 @@ img {
 }
 @media (min-width: 1300px) {
   .promo__text {
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 }
 
 @media (min-width: 768px) {
   .promo__image {
     position: absolute;
-    top: 251px;
-    left: 70px;
+    top: 243px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 709px;
     height: 609px;
     z-index: -1;
@@ -1117,7 +1187,7 @@ img {
 }
 @media (min-width: 1300px) {
   .promo__image {
-    top: 32px;
+    top: 10px;
     left: calc(50% - 162px);
     width: 552px;
     height: 499px;
@@ -1186,15 +1256,16 @@ img {
   .site-menu__item--current::after {
     content: "";
     position: absolute;
-    left: 36px;
-    right: 0;
+    left: 37px;
+    right: -1px;
     height: 2px;
     background-color: #68b738;
   }
 }
 @media (min-width: 1300px) {
   .site-menu__item--current::after {
-    height: 2px;
+    left: 32px;
+    right: 3px;
     background-color: #ffffff;
   }
 }
@@ -1216,7 +1287,8 @@ img {
 @media (min-width: 1300px) {
   .site-menu__link {
     color: #ffffff;
-    padding-left: 34px;
+    padding-bottom: 5px;
+    padding-left: 32px;
   }
 }
 
@@ -1359,10 +1431,6 @@ img {
     height: 511px;
     max-width: none;
   }
-}
-
-.view__image--before {
-  padding-top: 10px;
 }
 
 .view__slider {

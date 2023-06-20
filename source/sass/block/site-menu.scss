@@ -28,8 +28,8 @@
     &::after {
       content: "";
       position: absolute;
-      left: 36px;
-      right: 0;
+      left: 37px;
+      right: -1px;
       height: 2px;
       background-color: $color-main;
     }
@@ -37,7 +37,8 @@
 
   @media (min-width: $desktop-width) {
     &::after {
-      height: 2px;
+      left: 32px;
+      right: 3px;
       background-color: $color-white;
     }
   }
@@ -58,7 +59,8 @@
 
   @media (min-width: $desktop-width) {
     color: $color-white;
-    padding-left: 34px;
+    padding-bottom: 5px;
+    padding-left: 32px;
   }
 }
 
