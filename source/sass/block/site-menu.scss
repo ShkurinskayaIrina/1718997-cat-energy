@@ -8,9 +8,14 @@
   text-align: center;
 
   padding: 0;
-  margin: 0;
+
+  background-color: $color-white;
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
     font-size: 18px;
     line-height: 24px;
   }
@@ -18,28 +23,42 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
+    background-color: transparent;
+  }
+}
+
+.site-menu__item {
+  border-top: 1px solid $color-smoky-gray;
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
   }
 }
 
 .site-menu__item--current {
   position: relative;
 
-  @media (min-width: $tablet-width) {
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
-      left: 37px;
-      right: -1px;
+      right: 17px;
+      bottom: 9px;
+      left: 17px;
       height: 2px;
       background-color: $color-main;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    &::after {
-      left: 32px;
-      right: 3px;
-      background-color: $color-white;
+    @media (min-width: $desktop-width) {
+      right: 16px;
+      bottom: 13px;
+      left: 16px;
+    }
+
+    .site-menu--main & {
+      @media (min-width: $desktop-width) {
+        background-color: $color-white;
+      }
     }
   }
 }
@@ -50,17 +69,27 @@
   text-decoration: none;
   padding-top: 22px;
   padding-bottom: 23px;
-  border-top: 1px solid $color-smoky-gray;
+
+  &:link:hover {
+    opacity: 0.6;
+  }
+
+  &:link:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     border-top: none;
-    padding: 17px 0 8px 36px;
+    padding: 18px;
   }
 
   @media (min-width: $desktop-width) {
-    color: $color-white;
-    padding-bottom: 5px;
-    padding-left: 32px;
+    padding: 16px;
+  }
+
+  .site-menu--main & {
+    @media (min-width: $desktop-width) {
+      color: $color-white;
+    }
   }
 }
-

@@ -44,23 +44,7 @@
   border-radius: 6px;
 
   @media (min-width: $tablet-width) {
-    height: 6px;
-    padding: 0;
-    background-color: $color-gainsborough;
-    border: none;
-  }
-
-  &::before {
-    @media (min-width: $tablet-width) {
-      position: absolute;
-      content: "";
-      width: 34px;
-      height: 34px;
-      left: calc(50% - 17px);
-      border-radius: 50%;
-      background-color: $color-white;
-      border: 1px solid $color-pebble;
-    }
+    display: none;
   }
 
   &::after {
@@ -70,14 +54,6 @@
     height: 6px;
     background-color: $color-main;
     border-radius: 6px;
-
-
-    @media (min-width: $tablet-width) {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      left: calc(50% - 4px);
-    }
   }
 
   .slider--before & {
@@ -89,3 +65,83 @@
   }
 }
 
+.slider__bar {
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+
+  @media (max-width: calc($tablet-width - 1px)) {
+    display: none;
+  }
+}
+
+.slider__bar::-moz-range-thumb { //стилизация ползунка для Firefox
+  height: 32px;
+  width: 32px;
+  box-sizing: border-box;
+
+  border: 12px solid $color-white;
+  border-radius: 50%;
+
+  background-color: $color-main;
+  box-shadow:
+    0 0 0 1px $color-pebble,
+    0 1px 3px 0 rgba($color-black, 0.16);
+
+  cursor: pointer;
+
+  &:hover {
+    box-shadow:
+      0 0 0 1px $color-pebble,
+      0 2px 4px 0 rgba($color-black, 0.19);
+  }
+
+  &:active {
+    box-shadow:
+      0 0 0 1px $color-pebble,
+      0 3px 5px 0 rgba($color-black, 0.2);
+  }
+}
+
+.slider__bar::-webkit-slider-thumb { //стилизация ползунка Chrome
+  appearance: none;
+  height: 32px;
+  width: 32px;
+
+  margin-top: -13px;
+  padding: 0;
+  border: 12px solid $color-white;
+  border-radius: 50%;
+
+  background-color: $color-main;
+  box-shadow:
+    0 0 0 1px $color-pebble,
+    0 1px 3px 0 rgba($color-black, 0.16);
+
+  cursor: pointer;
+
+  &:hover {
+    box-shadow:
+      0 0 0 1px $color-pebble,
+      0 2px 4px 0 rgba($color-black, 0.19);
+  }
+
+  &:active {
+    box-shadow:
+      0 0 0 1px $color-pebble,
+      0 3px 5px 0 rgba($color-black, 0.2);
+  }
+}
+
+.slider__bar::-webkit-slider-runnable-track { //Стилизация дорожки Chrome
+  height: 6px;
+  background-color: $color-pebble;
+  border-radius: 3px;
+}
+
+.slider__bar::-moz-range-track { //Стилизация дорожки для Firefox
+  height: 6px;
+  background-color: $color-pebble;
+  border-radius: 3px;
+}

@@ -1,9 +1,8 @@
 .copyright {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 15px;
+  padding-top: 19px;
   font-size: 16px;
   color: $color-twilight-grey;
   text-decoration: none;
@@ -11,5 +10,16 @@
   @media (min-width: $tablet-width) {
     gap: 24px;
     padding-top: 0;
+    margin: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__image {
+  &:hover {
+    color: $color-main;
   }
 }

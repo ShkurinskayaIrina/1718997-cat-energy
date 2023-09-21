@@ -14,3 +14,27 @@
   min-height: 100%;
   margin: 0;
 }
+
+.page__heading {
+  margin: 0;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.page__subheading {
+  margin: 0;
+  font-family: $font-heading;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

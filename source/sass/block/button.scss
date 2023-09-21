@@ -1,6 +1,7 @@
 .button {
   display: inline-block;
   padding: 11px;
+
   text-align: center;
   font-family: $font-heading;
   color: $color-white;
@@ -9,14 +10,37 @@
   background-color: $color-main;
   border: none;
 
-  @media (min-width: $tablet-width) {
+  &:hover {
+    background-color: $color-herbal;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+  }
+
+  @media (min-width: $tablet-width) { //"подобрать программу",
     padding: 17px 26px;
+  }
+}
+
+.button--large {
+  padding: 10px;
+
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    font-size: 20px;
   }
 }
 
 .button--secondary {
   font-size: 16px;
   line-height: 20px;
-  color: $color-twilight-grey;
-  background-color: $color-smoky-white;
+  padding: 10px 9px;
 }
+

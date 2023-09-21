@@ -1,8 +1,76 @@
 .offer {
+  position: relative;
+  min-height: 290px;
+  padding: 187px 53px 0 53px;
+
+  text-align: center;
+  background-image: url("../img/icon/gift.svg");
+  background-repeat: no-repeat;
+  background-position: center 59px;
   font-size: 16px;
   line-height: 20px;
   color: $color-white;
-  background-color: $color-main;
-  background-image: url("../../img/background/offer.jpg"); //доделать ретину и изменить картинку, убрать зеленый цвет
-  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+    padding: 72px 120px 68px 423px;
+    background-position: 79px center;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 187px 34px 42px;
+    background-position: center 55px;
+    text-align: center;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &::before {
+    z-index: -1;
+    background-color: $color-main;
+    opacity: 0.85;
+  }
+
+  &::after {
+    z-index: -2;
+    background-image: url("../img/background/offer.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 100% auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/offer@2x.png");
+      background-size: 100% auto;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/background/offer-long.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/offer-long@2x.png");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/background/offer.png");
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/offer@2x.png");
+      }
+    }
+  }
+}
+
+.offer__text {
+  margin: 0;
 }

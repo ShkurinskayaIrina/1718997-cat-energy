@@ -2,7 +2,70 @@
   font-family: $font-heading;
   font-size: 16px;
   line-height: 18px;
-  color: red;//$color-black-brown;
+  color: $color-silver;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  &.control--checkbox {
+    color: $color-black;
+  }
 }
 
+.control__label {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  grid-template-rows: 30px;
+  gap: 15px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 40px;
+    gap: 20px;
+  }
+}
+
+.control__label::before,
+.control__label::after {
+  content: "";
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 30px;
+  border: 1px solid $color-pebble;
+
+  @media (min-width: $tablet-width) {
+    height: 40px;
+  }
+}
+
+.control__input[type="radio"] + .control__label::before,
+.control__input[type="radio"] + .control__label::after {
+  border-radius: 50%;
+}
+
+.control__input:hover + .control__label {
+  cursor: pointer;
+}
+
+.control__input[type="radio"]:checked + .control__label::after {
+  background-clip: padding-box;
+  background-color: $color-main;
+  border: 8px solid transparent;
+
+  @media (min-width: $tablet-width) {
+    border-width: 11px;
+  }
+}
+
+.control__input[type="checkbox"]:checked + .control__label::after {
+  background-image: url("../img/icon/check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (min-width: $tablet-width) {
+    background-size: 24px auto;
+  }
+}

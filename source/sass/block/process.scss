@@ -3,15 +3,24 @@
   padding-bottom: 49px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 44px;
+    padding-top: 46px;
     padding-bottom: 46px;
     border-bottom: 1px solid $color-smoky-gray;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 72px;
+    padding-top: 71px;
     padding-bottom: 30px;
     border-bottom: none;
+  }
+}
+
+.process__heading {
+  margin: 0;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
   }
 }
 
@@ -53,10 +62,14 @@
     grid-template-rows: 80px auto;
     gap: 31px;
     align-items: start;
+
+    letter-spacing: 0.3px;
   }
 
   @media (min-width: $desktop-width) {
     padding-right: 0;
+    letter-spacing: 0.1px;
+    word-spacing: 1px;
   }
 
   &::before {
@@ -79,7 +92,7 @@
       counter-increment: process;
       content: counter(process) "";
       top: 0;
-      left: 111px;
+      left: 113px;
       font-family: $font-heading;
       font-size: 280px;
       line-height: 280px;
@@ -90,20 +103,20 @@
 }
 
 .process__item--leaf::before {
-  background-image: url("../../img/icon/leaf.svg");
+  background-image: url("../img/icon/leaf.svg");
 }
 
 .process__item--tub::before {
-  background-image: url("../../img/icon/tub.svg");
+  background-image: url("../img/icon/tub.svg");
 }
 
 .process__item--eat::before {
-  background-image: url("../../img/icon/eat.svg");
+  background-image: url("../img/icon/eat.svg");
 }
 
 
 .process__item--alarm::before {
-  background-image: url("../../img/icon/alarm.svg");
+  background-image: url("../img/icon/alarm.svg");
 }
 
 .process__item + .process__item {

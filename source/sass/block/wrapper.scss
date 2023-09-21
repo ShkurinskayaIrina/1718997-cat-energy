@@ -4,8 +4,8 @@
   // margin-left: auto;
   // margin-right: auto;
 
-  @media (min-width: $tablet-width) {
-    width: max-content;
-    margin-left: 0;
+  @media (min-width: $tablet-width) {//сомнения, что нужно, хочется удалить
+    // width: max-content;
+    // margin-left: 0;
   }
 }

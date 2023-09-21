@@ -1,10 +1,102 @@
+.catalog-additional {
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 77px;
+    margin-bottom: 86px;
+    display: grid;
+    grid-template-areas:
+      "header  header"
+      "list  offer";
+    row-gap: 78px;
+    column-gap: 80px;
+  }
+}
+
+.catalog-additional__container {
+  display: flex;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -20vw;
+    left: 0;
+    height: 2px;
+
+    background-color: $color-main;
+
+    @media (min-width: $tablet-width) {
+      top: 21px;
+      left: -20vw;
+    }
+  }
+}
+
 .catalog-additional__heading {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding-right: 22px;
+  background-color: $color-white;
   font-family: $font-heading;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 36px;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0.2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: header;
+    margin-left: -40px;
+    padding: 0 35px 0 40px;
+  }
 }
 
 .catalog-additional__list {
+  margin: 34px 0 35px;
+  padding: 0;
+
+  border-bottom: 1px solid $color-pebble;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 80px 0 72px;
+    border-right: 1px solid $color-pebble;
+    border-left: 1px solid $color-pebble;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: list;
+    margin: 0;
+    border-right: none;
+    border-left: none;
+  }
+}
+
+.catalog-additional__item {
+  border-top: 1px solid $color-pebble;
+}
+
+.catalog-additional__promo {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: offer;
+    margin-bottom: 0;
+  }
 }

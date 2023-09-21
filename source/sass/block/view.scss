@@ -1,33 +1,29 @@
 .view__images {
-  padding-bottom: 15px;
+  margin-bottom: 17px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 50% 1fr;
-    padding-right: 58px;
-    padding-bottom: 15px;
-    padding-left: 58px;
+    margin-bottom: 25px;
+    padding: 0 58px;
+
     overflow: hidden;
   }
 
   @media (min-width: $desktop-width) {
     padding-right: 0;
-    padding-left: 25px;
-    padding-bottom: 10px;
+    padding-left: 0;
+    margin-bottom: 20px;
   }
 }
 
 .view__images img {
   @media (min-width: $tablet-width) {
-    width: 592px;
+    width: 591px;
     height: 511px;
     max-width: none;
   }
 }
-
-// .view__image--before {
-//   padding-top: 10px;
-// }
 
 .view__slider {
   padding: 0 35px;
@@ -51,7 +47,7 @@
   &--after {
     @media (min-width: $tablet-width) {
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
     }
   }
 
