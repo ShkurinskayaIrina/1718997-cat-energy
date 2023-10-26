@@ -5,18 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи: Функциональное питание для котов</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="./favicon.ico">
-  <link rel="icon" href="./mg/favicons/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
-  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <header class="page-header page-header--main">
-    <nav class="page-header__nav page-header__nav--closed page-header__nav--nojs container">
+    <nav class="page-header__nav page-header__nav--opened page-header__nav--nojs container">
       <div class="page-header__wrapper">
-        <a class="page-header__logo logo logo__combo">
+        <a class="page-header__logo logo">
           <picture>
             <source media="(min-width: 1300px)" srcset="./img/logo-image-desktop.svg">
             <source media="(min-width: 768px)" srcset="./img/logo-image-tablet.svg">
@@ -26,11 +26,8 @@
           <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="18" alt="" aria-hidden="true">
         </a>
 
-        <button class="page-header__toggler" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <button class="page-header__toggler" type="button" aria-label="Открыть меню"></button>
       </div>
-
       <ul class="page-header__menu site-menu site-menu--main">
         <li class="site-menu__item site-menu__item--current">
           <a class="site-menu__link">Главная</a>
@@ -47,12 +44,14 @@
 
   <main class="page-main">
     <header class="page-main__header promo">
-      <div class="promo__wrapper">
-        <h1 class="promo__heading">Функциональное<br>питание для котов</h1>
+      <div class="promo__wrapper container">
+        <h1 class="promo__heading">Функциональное питание для котов</h1>
         <p class="promo__text">Занялся собой? Займись котом!</p>
         <picture>
-          <source media="(min-width: 1300px)"
-            srcset="./img/promo-good-desktop.png 1x, img/promo-good-desktop@2x.png 2x">
+          <source type="image/webp" media="(min-width: 1300px)" srcset="./img/promo-good-desktop.webp 1x, img/promo-good-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/promo-good-tablet.webp 1x, img/promo-good-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./img/promo-good-mobile.webp 1x, ./img/promo-good-mobile@2x.webp 2x">
+          <source media="(min-width: 1300px)" srcset="./img/promo-good-desktop.png 1x, img/promo-good-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="./img/promo-good-tablet.png 1x, img/promo-good-tablet@2x.png 2x">
           <img class="promo__image" src="./img/promo-good-mobile.png" srcset="img/promo-good-mobile@2x.png 2x"
             width="280" height="270" alt="Банка куриного корма Cat Energy Pro на 500 грамм">
@@ -127,23 +126,27 @@
           <p class="example__spending">
             <span>Затраты на питание:</span>
             <span>15 000 руб.</span>
+          </p>
         </div>
 
-        <div class="example_view view">
+        <div class="example__view view">
           <div class="view__images">
             <div class="view__image view__image--before view__image--active">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/cat-fat-medium.webp 1x, ./img/cat-fat-medium@2x.webp 2x">
+                <source type="image/webp" srcset="./img/cat-fat-small.webp 1x, ./img/cat-fat-small@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/cat-fat-medium.png 1x, ./img/cat-fat-medium@2x.png 2x">
                 <img src="./img/cat-fat-small.png" srcset="./img/cat-fat-small@2x.png 2x" width="280" height="232"
-                  alt="Кот до употребления корма: выглядит ленивым, толстым и страшным">
+                  alt="Кот до употребления корма: выглядит ленивым, толстым и страшным.">
               </picture>
             </div>
             <div class="view__image view__image--after">
               <picture>
-                <source media="(min-width: 768px)"
-                  srcset="./img/cat-skinny-medium.png 1x, ./img/cat-skinny-medium@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/cat-skinny-medium.webp 1x, ./img/cat-skinny-medium@2x.webp 2x">
+                <source type="image/webp" srcset="./img/cat-skinny-medium.webp 1x, ./img/cat-skinny-medium@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="./img/cat-skinny-medium.png 1x, ./img/cat-skinny-medium@2x.png 2x">
                 <img src="./img/cat-skinny-small.png" srcset="./img/cat-skinny-small@2x.png 2x" width="280" height="232"
-                  alt="Кот после употребления корма: выглядит молодым, худым и бодрым">
+                  alt="Кот после употребления корма: выглядит молодым, худым и бодрым.">
               </picture>
             </div>
           </div>
@@ -151,7 +154,8 @@
           <div class="view__slider slider slider--before">
             <button class="slider__button slider__button--before" type="button">Было</button>
             <div class="slider__toggler"></div>
-            <input class="slider__bar" type="range" value="50" min="0" max="100" step="1">
+            <input class="slider__bar" type="range" name="weight" id="weight"
+              value="50" min="0" max="100" step="1">
             <button class="slider__button slider__button--after" type="button">Стало</button>
           </div>
         </div>
@@ -168,13 +172,15 @@
         </p>
       </div>
       <picture>
+        <source type="image/webp" media="(min-width: 1300px)" srcset="./img/location-desktop.webp">
+        <source type="image/webp" media="(min-width: 768px)" srcset="./img/location_tablet.webp">
+        <source type="image/webp" srcset="./img/location.webp">
         <source media="(min-width: 1300px)" srcset="./img/location-desktop.png">
         <source media="(min-width: 768px)" srcset="./img/location_tablet.png">
         <img class="contacts__location" src="./img/location.png" width="320" height="362" alt="Карта к нашему офису">
       </picture>
     </footer>
   </main>
-
   <footer class="page-footer">
     <div class="page-footer__wrapper container">
       <a class="page-footer__logo logo">
@@ -184,41 +190,37 @@
       <ul class="page-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Мы в Вконтакте</span>
-            <svg width="23" height="16">
+            <svg width="23" height="16" role="img" aria-label="Мы в Вконтакте">
               <use xlink:href="./img/sprite.svg#icon-vk"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-            <span class="visually-hidden">Мы в Инстаграме</span>
-            <svg width="16" height="16">
+            <svg width="16" height="16" role="img" aria-label="Мы в Инстаграме">
               <use xlink:href="./img/sprite.svg#icon-instagram"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-            <span class="visually-hidden">Мы в Фейсбуке</span>
-            <svg width="22" height="22">
+            <svg width="22" height="22" role="img" aria-label="Мы в Фейсбуке">
               <use xlink:href="./img/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
       </ul>
 
-      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="visually-hidden">Разработано в</span>
+      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработано в">
         HTML Academy
-        <svg class="copyright__image" width="27" height="34">
+        <svg class="copyright__image" width="27" height="34" role="img" aria-hidden="true">
           <use xlink:href="./img/sprite.svg#logo-academy"></use>
         </svg>
       </a>
     </div>
   </footer>
 
-  <script src="./js/main.js" type="module"></script>
+  <script src="./js/main.min.js"></script>
 </body>
 
 </html>

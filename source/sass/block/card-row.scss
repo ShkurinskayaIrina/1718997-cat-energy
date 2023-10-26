@@ -35,14 +35,16 @@
 .card-row__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: flex-end;
+  align-items: center;
 
   margin: 0;
   margin-top: 13px;
   color: $color-twilight-grey;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 94px;
+    grid-template-columns: 1fr 84px;
+    column-gap: 10px;
+
     margin-top: 2px;
   }
 

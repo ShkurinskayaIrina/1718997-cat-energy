@@ -1,26 +1,14 @@
 .logo {
-  :hover {
+  &:hover {
     opacity: 0.8;
   }
 
-  :active {
+  &:focus-visible {
+    outline: 2px solid $color-twilight-grey;
+  }
+
+  &:active {
     opacity: 0.6;
-  }
-}
-
-.logo__combo {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  align-items: center;
-
-  @media (min-width: $tablet-width) {
-    grid-template-columns: 60px 1fr;
-    gap: 12px;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: 75px 1fr;
-    gap: 6px;
   }
 }
 

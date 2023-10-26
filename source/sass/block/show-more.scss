@@ -75,6 +75,15 @@
   color: $color-twilight-grey;
   background-color: $color-smoky-white;
 
+  &:hover {
+    background-color: $color-marble-grey;
+  }
+
+  &:active {
+    background-color: $color-marble-grey;
+    color: rgba($color-twilight-grey, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 86px;
   }

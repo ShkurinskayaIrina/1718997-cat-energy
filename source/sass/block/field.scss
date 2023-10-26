@@ -1,7 +1,7 @@
 .field {
   position: relative;
   display: grid;
-  grid-template-columns: max-content auto;
+  grid-template-columns: auto 1fr;
   gap: 13px;
   align-items: center;
   font-family: $font-heading;
@@ -28,6 +28,10 @@
   }
 }
 
+.field__name {
+  max-width: 100px;
+}
+
 .field__input {
   width: 100%;
   padding: 9px 14px 10px;
@@ -38,6 +42,29 @@
   border: 1px solid $color-special-gray;
   text-transform: uppercase;
   resize: none;
+
+  &:hover {
+    border-color: $color-pebble;
+    outline: none;
+  }
+
+  &:focus {
+    border-color: $color-twilight-grey;
+    outline: 1px solid $color-twilight-grey;
+
+    & + .field__icon {
+      color: $color-main;
+    }
+  }
+
+  &--error {
+    border-color: $color-error;
+    outline: 1px solid $color-error;
+
+    & + .field__icon {
+      color: $color-error;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     padding-left: 19px;
@@ -52,6 +79,7 @@
 .field__icon {
   position: absolute;
   right: 14px;
+  color: $color-silver;
 
   @media (min-width: $desktop-width) {
     right: 18px;

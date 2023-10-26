@@ -11,7 +11,8 @@
 
   display: grid;
   grid-template-columns: 70px 1fr;
-  grid-template-rows: 98px minmax(112px, 1fr) 56px;
+  grid-template-rows: minmax(98px, max-content) minmax(112px, 1fr) minmax(56px, max-content);
+
   column-gap: 8px;
 
   padding-right: 19px;
@@ -21,7 +22,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 340px 300px;
-    grid-template-rows: 88px minmax(147px, 1fr) 80px;
+    grid-template-rows: minmax(88px, max-content) minmax(147px, 1fr) minmax(80px, max-content);
     column-gap: 3px;
     padding: 49px 0 7px 53px;
   }
@@ -29,7 +30,7 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: 200px 1fr;
     padding: 0;
-    grid-template-rows: 187px minmax(99px, 1fr) 88px;
+    grid-template-rows: minmax(187px, max-content) minmax(99px, 1fr) minmax(88px, max-content);
     column-gap: 14px;
   }
 
@@ -60,7 +61,6 @@
       grid-column: 1 / 2;
       grid-row: 1 / 2;
       margin: auto;
-      // margin-left: 0;
     }
   }
 
@@ -209,6 +209,20 @@
   text-transform: uppercase;
   color: $color-black;
 
+  &:hover {
+    &::after {
+      width: 32px;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-twilight-grey;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     align-items: center;
     align-self: flex-start;
@@ -233,15 +247,5 @@
     background-image: url("../img/icon/arrow.svg");
     background-repeat: no-repeat;
     background-position: 100% 50%;
-  }
-
-  &:hover {
-    &::after {
-      width: 32px;
-    }
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }

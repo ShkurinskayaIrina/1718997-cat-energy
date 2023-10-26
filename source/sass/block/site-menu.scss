@@ -28,10 +28,15 @@
 }
 
 .site-menu__item {
-  border-top: 1px solid $color-smoky-gray;
+  border-bottom: 1px solid $color-smoky-gray;
 
   @media (min-width: $tablet-width) {
-    border-top: none;
+    max-width: 190px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 210px;
   }
 }
 
@@ -72,6 +77,10 @@
 
   &:link:hover {
     opacity: 0.6;
+  }
+
+  &:link:focus {
+    outline: 2px solid $color-twilight-grey;
   }
 
   &:link:active {

@@ -14,11 +14,15 @@
     background-color: $color-herbal;
   }
 
+  &:focus-visible {
+    outline: 2px solid $color-twilight-grey;
+  }
+
   &:active {
     color: rgba($color-white, 0.3);
   }
 
-  @media (min-width: $tablet-width) { //"подобрать программу",
+  @media (min-width: $tablet-width) {
     padding: 17px 26px;
   }
 }
@@ -43,4 +47,3 @@
   line-height: 20px;
   padding: 10px 9px;
 }
-

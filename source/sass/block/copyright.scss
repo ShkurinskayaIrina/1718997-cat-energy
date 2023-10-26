@@ -1,20 +1,24 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
   padding-top: 20px;
   font-size: 16px;
   color: $color-twilight-grey;
   text-decoration: none;
 
-  @media (min-width: $tablet-width) {
-    gap: 24px;
-    padding-top: 0;
-    margin: 0;
+  &:focus-visible {
+    outline: 2px solid $color-twilight-grey;
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 24px;
+    padding-top: 0;
+    margin: 0;
   }
 }
 

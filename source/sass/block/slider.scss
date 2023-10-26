@@ -23,6 +23,10 @@
     cursor: pointer;
   }
 
+  &:focus-visible {
+    outline: 2px solid $color-twilight-grey;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -70,6 +74,10 @@
   width: 100%;
   background: transparent;
   cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid $color-twilight-grey;
+  }
 
   @media (max-width: calc($tablet-width - 1px)) {
     display: none;

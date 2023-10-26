@@ -31,7 +31,6 @@
   &::after {
     position: absolute;
     content: "";
-    top: 0;
     left: -9vw;
     right: -9vw;
     height: 1px;
@@ -42,8 +41,12 @@
     }
   }
 
+  &::before {
+    top: 0;
+  }
+
   &::after {
-    top: 157px;
+    // top: 157px;
     bottom: 0;
   }
 }

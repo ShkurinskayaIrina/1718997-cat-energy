@@ -1,19 +1,25 @@
-.view__images {
-  margin-bottom: 17px;
-
+.view {
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 50% 1fr;
-    margin-bottom: 25px;
     padding: 0 58px;
-
-    overflow: hidden;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 0;
-    padding-left: 0;
-    margin-bottom: 20px;
+    padding: 0;
+  }
+}
+
+.view__images {
+  position: relative;
+  overflow: hidden;
+
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 19px;
   }
 }
 
@@ -29,29 +35,37 @@
   padding: 0 35px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 58px;
-  }
-
-  @media (min-width: $desktop-width) {
     padding: 0;
   }
 }
 
 .view__image {
+  overflow: hidden;
   display: none;
 
+  &--active {
+    display: block;
+  }
+
+  &--before {
+    @media (min-width: $tablet-width) {
+      width: 50%;
+    }
+  }
+
   @media (min-width: $tablet-width) {
-    overflow: hidden;
+    display: block;
   }
 
   &--after {
     @media (min-width: $tablet-width) {
       display: flex;
       justify-content: flex-end;
-    }
-  }
+      position: absolute;
+      top: 0;
+      right: 0;
 
-  &--active {
-    display: block;
+      width: 50%;
+    }
   }
 }

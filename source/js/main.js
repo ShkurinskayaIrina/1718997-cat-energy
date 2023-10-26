@@ -1,18 +1,35 @@
-const classSliderButttonBefore = 'slider__button--before';
-const classSliderBefore = 'slider--before';
-const classSliderAfter = 'slider--after';
-
 const navHeader = document.querySelector('.page-header__nav');
 const navToggle = navHeader.querySelector('.page-header__toggler');
 
 const exampleContainer = document.querySelector('.view');
+
+const classSliderBefore = 'slider--before';
+const classSliderAfter = 'slider--after';
+const classImageActive = 'view__image--active';
+
+navHeader.classList.remove('page-header__nav--nojs');
+navHeader.classList.remove('page-header__nav--opened');
+navHeader.classList.add('page-header__nav--closed');
+
+navToggle.addEventListener('click', function() {
+  navHeader.classList.toggle('page-header__nav--closed');
+  navHeader.classList.toggle('page-header__nav--opened');
+});
+
 if (exampleContainer) {
   const viewSlider = exampleContainer.querySelector('.view__slider');
 
   const exampleImgBefore = exampleContainer.querySelector('.view__image--before');
   const exampleImgAfter = exampleContainer.querySelector('.view__image--after');
+  const  sliderBar = exampleContainer.querySelector('.slider__bar');
 
-  const sliderButtons = exampleContainer.querySelectorAll('.slider__button');
+  const sliderBtnBefore = document.querySelector('.slider__button--before');
+  const sliderBtnAfter = document.querySelector('.slider__button--after');
+
+  const handleSliderChange = function(widthValue) {
+    exampleImgBefore.setAttribute("style",`width:${100-widthValue}%`);
+    exampleImgAfter.setAttribute("style",`width:${widthValue}%`);
+  }
 
   const handleSliderClick = function(classNameRemove, classNameAdd) {
     viewSlider.classList.remove(classNameRemove);
@@ -20,32 +37,27 @@ if (exampleContainer) {
   }
 
   const showExampleImg = function(elementClassRemove, elementClassAdd) {
-    const className = 'view__image--active';
-    elementClassRemove.classList.remove(className);
-    elementClassAdd.classList.add(className);
+    elementClassRemove.classList.remove(classImageActive);
+    elementClassAdd.classList.add(classImageActive);
   }
 
-  sliderButtons.forEach((sliderButton) => {
-    sliderButton.addEventListener('click', () => {
-      if (sliderButton.classList[1] === classSliderButttonBefore) {
-        handleSliderClick(classSliderAfter, classSliderBefore);
-        showExampleImg(exampleImgAfter, exampleImgBefore);
-      } else {
-        handleSliderClick(classSliderBefore, classSliderAfter);
-        showExampleImg(exampleImgBefore, exampleImgAfter);
-      }
-    })
+  sliderBtnBefore.addEventListener('click', () => {
+    handleSliderClick(classSliderAfter, classSliderBefore);
+    showExampleImg(exampleImgAfter, exampleImgBefore);
+
+    sliderBar.value = '0';
+    handleSliderChange(sliderBar.value);
   });
+
+  sliderBtnAfter.addEventListener('click', () => {
+    handleSliderClick(classSliderBefore, classSliderAfter);
+    showExampleImg(exampleImgBefore, exampleImgAfter);
+
+    sliderBar.value = '100';
+    handleSliderChange(sliderBar.value);
+  });
+
+  sliderBar.addEventListener('input', (evt) => {
+    handleSliderChange(evt.target.value);
+  })
 }
-
-navHeader.classList.remove('page-header__nav--nojs');
-navToggle.addEventListener('click', function() {
-  navHeader.classList.toggle('page-header__nav--closed');
-  navHeader.classList.toggle('page-header__nav--opened');
-});
-
-
-
-
-
-

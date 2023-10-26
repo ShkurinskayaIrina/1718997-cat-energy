@@ -1,16 +1,6 @@
 .contacts {
-  // margin-right: -6vw;
-  // margin-left: -6vw;
-
-  // @media (min-width: $tablet-width) {
-  // margin-right: -9vw;
-  // margin-left: -9vw;
-  // }
-
   @media (min-width: $desktop-width) {
     position: relative;
-    // margin-right: -7.5vw;
-    // margin-left: -7.5vw;
   }
 
   &:not(.contacts--main) {
@@ -22,7 +12,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 26px 0;
-
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 180px);
@@ -43,6 +32,7 @@
 
 .contacts__heading {
   margin: 0;
+  padding-right: 10px;
   font-family: $font-heading;
   text-transform: uppercase;
   font-size: 16px;
@@ -76,6 +66,8 @@
   display: block;
   width: 320px;
   height: 362px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: $tablet-width) {
     width: 768px;
